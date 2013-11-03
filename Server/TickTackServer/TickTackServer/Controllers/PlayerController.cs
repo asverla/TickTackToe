@@ -37,7 +37,26 @@ namespace TickTackServer.Controllers
             {
                 return Content("0");
             }
+        }
 
+        public ActionResult Login()
+        {
+            string email = Request.Form["email"];
+            string password = Request.Form["password"];
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+                return Content("0");
+
+            var _player = _context.Players.Where(c => c.Email == email && c.Password == password).FirstOrDefault();
+
+            if (_player == null)
+                return Content("0");
+
+            _player.token = Guid.NewGuid();
+
+            _context.SaveChanges();
+
+            return Content(_player.token.ToString());
         }
     }
 }

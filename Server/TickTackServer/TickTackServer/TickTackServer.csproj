@@ -170,6 +170,10 @@
     <Compile Include="Migrations\201311012100545_Initial.Designer.cs">
       <DependentUpon>201311012100545_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311032103252_AddTokenPropertyToPlayer.cs" />
+    <Compile Include="Migrations\201311032103252_AddTokenPropertyToPlayer.Designer.cs">
+      <DependentUpon>201311032103252_AddTokenPropertyToPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Player.cs" />
@@ -300,6 +304,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201311012100545_Initial.resx">
       <DependentUpon>201311012100545_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311032103252_AddTokenPropertyToPlayer.resx">
+      <DependentUpon>201311032103252_AddTokenPropertyToPlayer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
